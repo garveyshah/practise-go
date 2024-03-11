@@ -1,0 +1,6 @@
+[submodule "piscine-go"]
+	path = piscine-go
+	url = https://learn.zone01kisumu.ke/git/oumouma/piscine-go
+[submodule "sudoku"]
+	path = sudoku
+	url = https://learn.zone01kisumu.ke/git/oumouma/sudoku

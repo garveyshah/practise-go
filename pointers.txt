@@ -1,0 +1,21 @@
+pointers    quiz basic to intermediate levels:
+
+    Basic Level:
+        What is a pointer in Go? Explain with an example.
+        How do you declare a pointer in Go?
+        How do you dereference a pointer in Go?
+        What is the zero value of a pointer in Go?
+
+    Intermediate Level:
+        Explain the concept of passing by reference and passing by value in Go functions.
+        Write a function in Go that swaps the values of two integers using pointers.
+        How are pointers used in data structures like linked lists, trees, or graphs?
+        Write a program in Go that demonstrates the use of pointers to structures.
+        What is the difference between the & operator and the * operator in Go?
+
+    Challenge Level:
+        Write a program in Go that creates a dynamically allocated array using pointers.
+        Create a function in Go that receives a slice and modifies its contents using pointers.
+        Explain the concept of pointer arithmetic in Go, if any.
+        Write a program in Go that demonstrates the use of pointers to functions.
+        Implement a simple stack or queue data structure using pointers in Go.
