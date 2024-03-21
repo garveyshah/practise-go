@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"project"
+	"project01"
 )
 
 func main() {

@@ -9,5 +9,5 @@ func Zero(x int) {
 func main() {
 	x := 5
 	Zero(x)
-	fmt.Prinln(x)
+	fmt.Println(x)
 }

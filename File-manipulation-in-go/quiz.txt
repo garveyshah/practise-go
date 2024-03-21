@@ -1,0 +1,12 @@
+Questions on file manipulation in Go:
+
+    How can you read the contents of a file in Go and store them in a variable?
+    Explain how to create a new file in Go and write data into it.
+    Discuss different methods for checking if a file exists in Go.
+    How can you delete a file using Go's standard library?
+    Explain how to rename a file using Go.
+    Discuss techniques for reading and writing CSV files in Go.
+    How can you efficiently copy the contents of one file to another in Go?
+    Explain how to traverse directories and list all files within a directory using Go.
+    Discuss methods for checking the size of a file in Go.
+    How can you handle errors effectively while performing file operations in Go?

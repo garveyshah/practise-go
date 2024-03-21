@@ -1,0 +1,19 @@
+        STRUCS
+- are used to define custom data types that represent a collection of fields.
+- are particularly useful for organizing related data into a single unit.
+
+	APPLICATION AREAS
+1. Modelling real-world entities:
+> structs can be used to model real world entities such as people, cars, books, etC, Each field in the struc corresponds to a characteristic or attribute of the entity. For example, a 'Person' struct might have fields like 'name', 'age', 'address', etc .
+2. Data Structures:
+> structs are frequently used to implement various data structures like linked lists, trees, queues, stack, graphs, etc.. Each node or element in the data structure can be used  represented by a struct, with fields representing data and references to other elements.
+3. Configuration Objects:
+> Structs can be used to define configuration objects that hold various settings or parameters for an application or system. Each field in the struct represents a different configuraion option.
+4. API Responses (Application Programming Interface- A set of rules and protocals that allows different software applications to communicatw with each other/ define how software components should intract, including what data can be accessed and what actions can be performed.):
+> When working with APIs, structs are often used to represent the structure of the data being sent or received. For example you might define a struct to represent the JSON response from an API endpoint.
+5. Database Records: 
+> In database-Driven applications , strucs are commonly used to represent rows in database tables. Each field in the struct represents a column in the in the table.
+6. Function Parameters and Return Types: 
+> Structs can be used to group related parameters and return values in function signatures. This can help improve code readability and maintainabilty, especially when dealing with complex functions.
+
+Overall, structs are a fundamental building block in Go Programming, providing a way to define custom data types and organize date effectively. They are used across a wide range of applications and scenerios to represent and manipulate data in a structured manner. 
