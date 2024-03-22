@@ -17,3 +17,71 @@
 > Structs can be used to group related parameters and return values in function signatures. This can help improve code readability and maintainabilty, especially when dealing with complex functions.
 
 Overall, structs are a fundamental building block in Go Programming, providing a way to define custom data types and organize date effectively. They are used across a wide range of applications and scenerios to represent and manipulate data in a structured manner. 
+
+1.Basics Structs: 
+-A struct in Go is a composite datatype that groups    together zero or more fields of any type under a single name.
+-Structa are declared using the 'type' keword followed by the struct name and a list of fields enclosed in curly braces '{}'
+eg. 
+        type person struct {
+                Name string 
+                Age int
+        }
+
+2.Inisilizing Structs:
+- Struct variables are initialized using the struct literal syntax , where you provide values for each field in the order they are declared.
+e.g 
+        person := Person{Name: "Alice". Age: 30}
+
+3.Accessing Structs Fields:
+-Struct field are accessed using the dot '.' notation followed by the field name.
+-Struct field can be modified directly if the struct variable is mutable.
+e.g
+
+        fmt.Println(person.Name) // Accessing Field
+        person.Age = 31 // Modifying field
+
+4. Nested Structs:
+- A nested struct is a struct that is a field of another struct.
+- Nested structs are declared and initialied similarly to regular structs.
+e.g 
+        type Address struct {
+                city    string
+                country string
+        }
+
+        type Person struct {
+                Name    string
+                Age     int
+                Address Address
+        } 
+
+        person := Person{Nmae: "John", Age: 25, Address: Address{City: "New York", Country: "USA"}}
+
+5. Anonymous Struts: 
+- An anonymous struct is a struct without a specified name.
+- Anonymous structs are declared and initialized using the struct syntact without specifying a name.
+e.g 
+        details := struct {
+                Name string
+                Age int
+        }{Nmae: "Bob", Age: 35}
+
+6. Struct Methods:
+- Struct methods are functions associated with a particular struct type.
+- They are defined using the 'func' keyword followed by the receiver type in parentheses before the function name.
+e.g 
+        func (p Person) Greet() {
+                fmt.Println("Hello, my name is", p.Name)
+        }
+
+7. Pointer Receiver Methods:
+- Pointers receiver methods have a pointer type receiver, allowing them to to modify the struct directly.
+- They are define similarly to regulary methods but with a pointer receiver type.
+e.g
+        func (p *Person) UpdateAge(newAge int) {
+                p.Age = newAge
+        }
+
+8. Embedded Structs:
+- Embedded structs allow a struct to include another struct as as one of its fields.
+- The fields of the embedded struc can be accessed directly from the outer struct.

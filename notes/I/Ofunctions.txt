@@ -1,0 +1,2 @@
+UNDERSTNDING I/O FUNCTIONS IN GO 
+> In Go, unput/output (I/O)operations are crucial for interacting with external sources like files \, network connections and standard input input

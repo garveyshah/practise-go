@@ -1,0 +1,54 @@
+Final Exam:
+
+    Shell Scripting (Week One):
+
+    Write a shell script that takes a filename as an argument 
+    and prints the number of lines in that file.
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that prints the English alphabet in reverse
+     order using a loop.
+
+    String Manipulation (Week Three):
+
+    Write a Go function CapitalizeEachWord that takes a string
+     as input and capitalizes the first letter of each word.
+
+    Structures and File Manipulation (Week Four):
+
+    Define a Go structure Person with fields Name and Age. 
+    Write a program that reads data from a file containing names and ages 
+    separated by commas, creates Person structs for each entry,
+     and prints them out.
+
+    Functions as Arguments (Week Five):
+
+    Write a Go function Filter that takes a slice of integers and a function as arguments.
+     The function should apply the given function to each integer in the slice and 
+     return a new slice containing only the integers for which the function returns true.
+
+    Usage of OS.Args (Week Six):
+
+    Write a Go program that reads the names of files passed as command-line arguments and 
+    prints the contents of each file to the standard output.
+
+    Linked Lists (Week Seven):
+
+    Implement a linked list in Go with methods to add a node at the end, print the list,
+     and find a node with a specific value.
+
+    Binary Trees (Week Eight):
+
+    Implement a binary search tree in Go with methods to insert a value, search for a value,
+     and print the tree in in-order traversal.
+
+    Hackathon Problem (Week Nine):
+
+    Write a Go program that reads a text file and counts the occurrences of each word, 
+    then prints out the word frequencies in descending order.
+
+    Raid 3 - File Reader (Week Ten):
+
+Write a Go program that takes a filename as an argument and reads the file, 
+then prints the number of lines, words, and characters in the file.
