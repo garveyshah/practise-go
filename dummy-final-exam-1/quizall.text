@@ -1,0 +1,446 @@
+ChatGPT
+
+Here are 30 intermediate-level questions based on the Piscine Go curriculum:
+
+Week One: Introduction to shell
+
+    Explain the purpose of the chmod command in Unix-like operating systems.
+    How do you use the grep command to search for a specific pattern in a file?
+    Describe the difference between cut, sed, and tr commands in Unix-like operating systems.
+    What is the significance of using jq in shell scripting?
+    In the context of shell scripting, what does wc command stand for and how is it useful?
+
+Week Two: Introduction to Go Lang and basic programming concepts
+
+    Define the purpose of variables in programming and provide an example of variable declaration in Go.
+    How do you use loops in Go programming? Provide examples of for loops.
+    Explain the usage of the z01.PrintRune function in GoLang with an example.
+    Describe the difference between the printalphabet and printreversealphabet exercises.
+    How would you implement the isnegative function in Go?
+
+Week Three: Introduction to Go Lang and basic programming concepts II
+
+    Explain the concept of string manipulation in programming and provide examples in Go.
+    How do you use range loops in Go programming? Provide an example.
+    What are pointers in GoLang, and how do you manipulate them?
+    Describe the significance of modulo and division in computer science.
+    Discuss the purpose of the strlen function in GoLang.
+
+Week Four: Introduction to Structures and advanced types in GoLang
+
+    Define structures in GoLang and provide an example.
+    How do you manipulate files in GoLang? Provide examples using Open, Read, and Close methods.
+    Explain the significance of the displayfile and cat exercises.
+    What is the purpose of the bool exercise in GoLang?
+    Discuss the use of ztail in GoLang and its practical applications.
+
+Week Five: Functions as argument
+
+    Describe the concept of functions as arguments in GoLang.
+    Explain the purpose of the foreach function in GoLang and provide an example.
+    How do you use the map function in GoLang?
+    Discuss the significance of the issorted function in GoLang.
+    What is the purpose of the sortwordarr exercise in GoLang?
+
+Week Six: Usage of OS.Args
+
+    Describe the significance of Os.Args in GoLang.
+    How do you use the printparams function in GoLang?
+    Explain the purpose of the revparams exercise in GoLang.
+    Discuss the significance of the sortparams exercise in GoLang.
+    How does the printprogramname function work in GoLang?
+
+These questions cover various topics from the provided curriculum and should assess intermediate-level understanding effectively.
+User
+i want a final exam like question structure, do include questions that require statement answers let them al require code writing answers
+ChatGPT
+
+Certainly! Here's a set of 10 final exam questions structured to require code-writing answers based on the Piscine Go curriculum:
+
+Final Exam:
+
+    Shell Scripting (Week One):
+
+    Write a shell script that takes a filename as an argument and prints the number of lines in that file.
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that prints the English alphabet in reverse order using a loop.
+
+    String Manipulation (Week Three):
+
+    Write a Go function CapitalizeEachWord that takes a string as input and capitalizes the first letter of each word.
+
+    Structures and File Manipulation (Week Four):
+
+    Define a Go structure Person with fields Name and Age. Write a program that reads data from a file containing names and ages separated by commas, creates Person structs for each entry, and prints them out.
+
+    Functions as Arguments (Week Five):
+
+    Write a Go function Filter that takes a slice of integers and a function as arguments. The function should apply the given function to each integer in the slice and return a new slice containing only the integers for which the function returns true.
+
+    Usage of OS.Args (Week Six):
+
+    Write a Go program that reads the names of files passed as command-line arguments and prints the contents of each file to the standard output.
+
+    Linked Lists (Week Seven):
+
+    Implement a linked list in Go with methods to add a node at the end, print the list, and find a node with a specific value.
+
+    Binary Trees (Week Eight):
+
+    Implement a binary search tree in Go with methods to insert a value, search for a value, and print the tree in in-order traversal.
+
+    Hackathon Problem (Week Nine):
+
+    Write a Go program that reads a text file and counts the occurrences of each word, then prints out the word frequencies in descending order.
+
+    Raid 3 - File Reader (Week Ten):
+
+Write a Go program that takes a filename as an argument and reads the file, then prints the number of lines, words, and characters in the file.
+
+These questions require practical coding skills and cover various aspects of the Piscine Go curriculum, providing a comprehensive assessment of the students' understanding and proficiency in Go programming.
+User
+do another set of questions increase difficulty
+ChatGPT
+
+Certainly! Let's create another set of 10 final exam questions with increased difficulty:
+
+Final Exam:
+
+    Shell Scripting (Week One):
+
+    Write a shell script that takes a directory as an argument and recursively lists all files with a .txt extension in that directory and its subdirectories.
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that generates the first 20 Fibonacci numbers and prints them.
+
+    String Manipulation (Week Three):
+
+    Write a Go function IsPalindrome that takes a string as input and returns true if the string is a palindrome (reads the same forwards and backwards), otherwise returns false.
+
+    Structures and File Manipulation (Week Four):
+
+    Define a Go structure Employee with fields Name, ID, and Salary. Write a program that reads employee data from a CSV file, calculates the total salary, and prints the average salary.
+
+    Functions as Arguments (Week Five):
+
+    Write a Go function ApplyFunction that takes a function and a slice of integers as arguments. The function should apply the given function to each integer in the slice and return a new slice containing the results.
+
+    Usage of OS.Args (Week Six):
+
+    Write a Go program that takes a directory as a command-line argument and prints the names and sizes of all files in that directory, sorted by size in descending order.
+
+    Linked Lists (Week Seven):
+
+    Implement a doubly linked list in Go with methods to add a node at the end, delete a node, and print the list in reverse order.
+
+    Binary Trees (Week Eight):
+
+    Implement an AVL tree (self-balancing binary search tree) in Go with methods to insert a value, delete a value, and print the tree in level-order traversal.
+
+    Hackathon Problem (Week Nine):
+
+    Write a Go program that simulates a simple banking system. The program should have methods to create accounts, deposit money, withdraw money, and check the account balance.
+
+    Raid 3 - File Reader (Week Ten):
+
+Write a Go program that reads a CSV file containing student grades (student ID, subject, grade) and calculates the average grade for each student.
+
+These questions require more advanced coding skills and cover deeper concepts in Go programming, providing a challenging assessment for students' proficiency.
+User
+do another set going from beginner level to hard
+ChatGPT
+
+Sure! Here's a set of 10 final exam questions ranging from beginner level to hard:
+
+Final Exam:
+
+    Shell Scripting (Week One):
+
+    Write a shell script that prints "Hello, World!" to the terminal.
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that prints "Hello, World!" to the standard output.
+
+    String Manipulation (Week Three):
+
+    Write a Go function CountVowels that takes a string as input and returns the number of vowels (a, e, i, o, u) in the string.
+
+    Structures and File Manipulation (Week Four):
+
+    Define a Go structure Rectangle with fields Length and Width. Write a program that calculates the area of a rectangle using this structure.
+
+    Functions as Arguments (Week Five):
+
+    Write a Go function ApplyFunction that takes a function and a slice of integers as arguments. The function should apply the given function to each integer in the slice and print the results.
+
+    Usage of OS.Args (Week Six):
+
+    Write a Go program that takes a name as a command-line argument and prints "Hello, [name]!" to the standard output.
+
+    Linked Lists (Week Seven):
+
+    Implement a singly linked list in Go with methods to add a node at the end and print the list.
+
+    Binary Trees (Week Eight):
+
+    Implement a binary search tree in Go with methods to insert a value, search for a value, and print the tree in in-order traversal.
+
+    Hackathon Problem (Week Nine):
+
+    Write a Go program that simulates a basic inventory management system. The program should have methods to add items, remove items, and display the current inventory.
+
+    Raid 3 - File Reader (Week Ten):
+
+Write a Go program that takes a filename as a command-line argument and prints the contents of the file to the standard output.
+
+These questions start with simpler tasks and gradually increase in complexity, providing a smooth progression from beginner to hard difficulty.
+User
+now from the curriculum based on quest two and 11 
+ChatGPT
+
+Certainly! Here's a set of 10 final exam questions based on Quest 2 and Quest 11 of the Piscine Go curriculum:
+
+Final Exam:
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that takes a user's name as input and prints a personalized greeting message.
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that calculates the factorial of a given integer using recursion.
+
+    Go Lang Basics (Week Two):
+
+    Write a Go function IsPrime that takes an integer as input and returns true if the number is prime, otherwise returns false.
+
+    Linked Lists (Week Eleven):
+
+    Implement a doubly linked list in Go with methods to add a node at the beginning, remove a node at the end, and print the list in reverse order.
+
+    Linked Lists (Week Eleven):
+
+    Write a Go function ListIntersection that takes two linked lists as input and returns a new linked list containing the intersection of the two lists.
+
+    Linked Lists (Week Eleven):
+
+    Implement a circular linked list in Go with methods to add a node at the end, remove a node at the beginning, and print the list.
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that generates the first N terms of the Fibonacci sequence and prints them.
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that takes a string as input and prints the reverse of the string.
+
+    Linked Lists (Week Eleven):
+
+    Write a Go function ListMerge that takes two sorted linked lists as input and merges them into a single sorted linked list.
+
+    Linked Lists (Week Eleven):
+
+    Implement a stack data structure using a linked list in Go with methods to push, pop, and print the stack.
+
+These questions assess the understanding and proficiency of students in both basic Go programming concepts and more advanced linked list implementations, covering aspects from Quest 2 and Quest 11 of the curriculum.
+User
+now from week quest 2 to the end of the curriculum
+ChatGPT
+
+Certainly! Here's a set of 10 final exam questions based on Quest 2 to the end of the Piscine Go curriculum:
+
+Final Exam:
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that takes two integers as input and calculates their sum, difference, product, and quotient.
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that reads an integer N from the user and prints the first N even numbers.
+
+    String Manipulation (Week Three):
+
+    Write a Go function ReverseWords that takes a sentence as input and reverses the order of the words.
+
+    Structures and File Manipulation (Week Four):
+
+    Define a Go structure Book with fields Title, Author, and ISBN. Write a program that reads book data from a CSV file and prints the details of all books.
+
+    Functions as Arguments (Week Five):
+
+    Write a Go function FilterEven that takes a slice of integers as input and returns a new slice containing only the even numbers.
+
+    Usage of OS.Args (Week Six):
+
+    Write a Go program that takes a filename as a command-line argument, reads the contents of the file, and prints the number of words, lines, and characters.
+
+    Linked Lists (Week Seven):
+
+    Implement a circular doubly linked list in Go with methods to add a node at the beginning, remove a node at the end, and print the list in both forward and reverse order.
+
+    Binary Trees (Week Eight):
+
+    Implement a binary search tree in Go with methods to insert a value, search for a value, and delete a value.
+
+    Hackathon Problem (Week Nine):
+
+    Write a Go program that simulates a basic student management system. The program should have methods to add students, remove students, and display student details.
+
+    Raid 3 - File Reader (Week Ten):
+
+    Write a Go program that takes a filename as a command-line argument and prints the number of unique words in the file along with their frequencies.
+
+These questions cover various aspects of the Piscine Go curriculum from basic programming concepts to more advanced data structures and file manipulation techniques, providing a comprehensive assessment of students' understanding and proficiency in Go programming.
+User
+different set
+ChatGPT
+
+Of course! Here's another set of 10 final exam questions based on Quest 2 to the end of the Piscine Go curriculum:
+
+Final Exam:
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that calculates the factorial of a given integer using an iterative approach.
+
+    String Manipulation (Week Three):
+
+    Write a Go function CountOccurrences that takes a string and a substring as input and returns the number of occurrences of the substring in the string.
+
+    Structures and File Manipulation (Week Four):
+
+    Define a Go structure Student with fields Name, Age, and Grade. Write a program that reads student data from a CSV file, calculates the average grade, and prints the names of students who scored above the average.
+
+    Functions as Arguments (Week Five):
+
+    Write a Go function ApplyFunctionSlice that takes a function and a slice of strings as arguments. The function should apply the given function to each string in the slice and return a new slice containing the results.
+
+    Usage of OS.Args (Week Six):
+
+    Write a Go program that takes two filenames as command-line arguments, reads the contents of both files, and writes the concatenated content to a new file.
+
+    Linked Lists (Week Seven):
+
+    Implement a circular linked list in Go with methods to insert a node at the beginning, remove a node at the end, and print the list in reverse order.
+
+    Binary Trees (Week Eight):
+
+    Implement a binary search tree in Go with methods to insert a value, delete a value, and print the tree in pre-order traversal.
+
+    Hackathon Problem (Week Nine):
+
+    Write a Go program that simulates a basic library management system. The program should have methods to add books, lend books, return books, and display available books.
+
+    Raid 3 - File Reader (Week Ten):
+
+    Write a Go program that takes a filename as a command-line argument and prints the longest word in the file along with its length.
+
+    Linked Lists (Week Eleven):
+
+    Implement a stack data structure using a linked list in Go with methods to push, pop, and print the stack.
+
+These questions cover various topics from the latter part of the Piscine Go curriculum, providing a challenging assessment of students' understanding and proficiency in Go programming.
+User
+another set
+ChatGPT
+
+Certainly! Here's another set of 10 final exam questions based on Quest 2 to the end of the Piscine Go curriculum:
+
+Final Exam:
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that takes an integer as input and prints whether it is prime or not.
+
+    String Manipulation (Week Three):
+
+    Write a Go function WordCount that takes a string and counts the number of words in it.
+
+    Structures and File Manipulation (Week Four):
+
+    Define a Go structure Employee with fields Name, ID, and Salary. Write a program that reads employee data from a CSV file, finds the employee with the highest salary, and prints their details.
+
+    Functions as Arguments (Week Five):
+
+    Write a Go function ApplyFunctionMap that takes a function and a map of strings to integers as arguments. The function should apply the given function to each value in the map and return a new map containing the results.
+
+    Usage of OS.Args (Week Six):
+
+    Write a Go program that takes a directory path as a command-line argument and recursively prints all file names with their absolute paths in that directory.
+
+    Linked Lists (Week Seven):
+
+    Implement a doubly linked list in Go with methods to add a node at the end, remove a node at the beginning, and print the list in reverse order.
+
+    Binary Trees (Week Eight):
+
+    Implement a binary search tree in Go with methods to insert a value, search for a value, and delete the minimum value node.
+
+    Hackathon Problem (Week Nine):
+
+    Write a Go program that simulates a basic banking system. The program should have methods to create accounts, deposit money, withdraw money, and display account balances.
+
+    Raid 3 - File Reader (Week Ten):
+
+    Write a Go program that takes a filename as a command-line argument and prints the number of words, lines, and characters in the file.
+
+    Linked Lists (Week Eleven):
+
+    Implement a queue data structure using a linked list in Go with methods to enqueue, dequeue, and print the queue.
+
+These questions offer a comprehensive assessment of students' knowledge and skills in Go programming, covering a range of topics from the latter part of the Piscine Go curriculum.
+User
+User
+now from  based on quest two and 11 new set of questions 
+ChatGPT
+
+Certainly! Here's a new set of 10 final exam questions based on Quest 2 and Quest 11 of the Piscine Go curriculum:
+
+Final Exam:
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that prompts the user to enter a number and then prints whether it is even or odd.
+
+    Go Lang Basics (Week Two):
+
+    Write a Go program that generates the first N terms of the Fibonacci sequence and stores them in a slice. Then, print the slice.
+
+    String Manipulation (Week Three):
+
+    Write a Go function HasPrefix that takes a string and a prefix as input and returns true if the string starts with the given prefix, otherwise returns false.
+
+    Structures and File Manipulation (Week Four):
+
+    Define a Go structure Car with fields Brand, Model, and Year. Write a program that reads car data from a CSV file, finds the newest car, and prints its details.
+
+    Functions as Arguments (Week Five):
+
+    Write a Go function ApplyToStringSlice that takes a function and a slice of strings as arguments. The function should apply the given function to each string in the slice and return a new slice containing the results.
+
+    Usage of OS.Args (Week Six):
+
+    Write a Go program that takes a directory path as a command-line argument and prints the names of all files and directories in that directory.
+
+    Linked Lists (Week Eleven):
+
+    Implement a stack data structure using a linked list in Go with methods to push, pop, and print the stack.
+
+    Linked Lists (Week Eleven):
+
+    Write a Go function ListFind that takes a linked list and a value as input and returns true if the value is found in the list, otherwise returns false.
+
+    Binary Trees (Week Eleven):
+
+    Implement a binary search tree in Go with methods to find the maximum value and minimum value.
+
+    Binary Trees (Week Eleven):
+
+    Write a Go function TreeHeight that takes a binary tree as input and returns the height of the tree.
+
+These questions cover various aspects of Go programming, focusing on both basic concepts introduced in Quest 2 and more advanced data structures covered in Quest 11.
