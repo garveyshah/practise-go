@@ -12,13 +12,14 @@ To start practicing Go with this repository, follow these steps:
 
 1. Clone the repository to your local machine:
 
+`bash`
 ```
-bash
 git clone https://github.com/garveyshah/practise-go.git
 ```
 2. Navigate to the directory containing the Go files:
+
+`bash`
 ```
-bash
 cd practise-go
 ```
 3.Explore the directories to find different exercises and projects
@@ -31,22 +32,25 @@ To contribute, follow these steps:
 
    1. Fork the repository.
    2. Create a new branch for your changes:
-      `bash`
+
+       `bash`
       ```
       git checkout -b feature/new-solution
       ```
   4. Make your changes and commit them:
-      `bash`
+
+     `bash`
       ```
      git commit -m "Add new feature"
       ```
-  5.  Push to your fork:
-       bash
+  6.  Push to your fork:
+
+       `bash`
        ```
       git push origin feature/new-feature
       ```     
 
-  6. Submit a pull request.
+  8. Submit a pull request.
      
 ## License
 
