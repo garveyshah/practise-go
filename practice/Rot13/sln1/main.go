@@ -33,11 +33,11 @@ func main() {
 	z01.PrintRune('\n')
 }
 
-func Rot13(s string) string {
+func Rot13(input string) string {
 	var result []byte
 
-	for i := 0; i < len(s); i++ {
-		c := s[i]
+	for i := 0; i < len(input); i++ {
+		c := input[i]
 		switch {
 		case c >= 'A' && c <= 'Z':
 			result = append(result, (c-'A'+13)%26+'A')
