@@ -1,6 +1,6 @@
 # **Practice Go**
 
-Welcome to the "practise-go" repository! This repository is dedicated to practicing Go programming language through various exercises and projects.
+Welcome to the **"practise-go"** repository! This repository is dedicated to practicing Go programming language through various exercises and projects.
 
 ## About Go
 
