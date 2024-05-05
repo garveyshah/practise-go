@@ -31,19 +31,19 @@ To contribute, follow these steps:
 
    1. Fork the repository.
    2. Create a new branch for your changes:
-       ```
-      bash
+      `bash`
+      ```
       git checkout -b feature/new-solution
       ```
-  3. Make your changes and commit them:
+  4. Make your changes and commit them:
+      `bash`
       ```
-      bash
      git commit -m "Add new feature"
       ```
-  4.  Push to your fork:
-        ```
-      bash
-     git push origin feature/new-feature
+  5.  Push to your fork:
+       bash
+       ```
+      git push origin feature/new-feature
       ```     
 
   6. Submit a pull request.
