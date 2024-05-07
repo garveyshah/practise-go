@@ -34,21 +34,25 @@ func main() {
 	// Convert the input string to interger.
 	nums, err := strconv.Atoi(num)
 	if err != nil {
-		fmt.Println("Error! :- Please numbers only.")
+		fmt.Println("Error! :- Please input numbers only.")
+		return
 	}
 
-	if nums > 0 {
+	// Validate if the input is a negative number.
+	if nums >= 0 {
 		fmt.Println("Error!! :- Please enter a negative number.")
 		return
 	}
 
-	fmt.Printf("Sum of Digits for %d to 0, is %d\n", nums, AddNegsUptoNthTerm(nums))
+	// Calculate and print the sum of negative intergers from the input number down to 0.
+	fmt.Printf("Sum of Digits for %d to 0, is %d\n", nums, SumOfNegativeInts(nums))
 }
 
-func AddNegsUptoNthTerm(nums int) int {
+func SumOfNegativeInts(nums int) int {
 	result := 0
 
-	for i := nums; i <= 0 ; i++ {
+	// Calculate the sum of negetive integers from the  input number down to 0.
+	for i := nums; i <= 0; i++ {
 		result += i
 	}
 	return result
