@@ -36,16 +36,19 @@ This is a simple Go program that greets the user, asks how they're doing, and pr
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/your-username/greetings-program.git
+ `bash`
+ ```
+ git clone https://github.com/your-username/greetings-program.git
+```
 
-    Navigate to the project directory:
+2. Navigate to the project directory:
 
-    bash
-
+`bash`
+```
 cd greetings-program
+```
 
-Run the program:
+3. Run the program:
 
 `bash`
 ```
@@ -54,7 +57,7 @@ go run .
 
 4. Follow the prompts to enter your name, mood, and task.
 
-##Description
+## Description
 
 This program is written in Go and uses the bufio package to handle user input. It greets the user, asks about their mood, and offers different responses based on their input. Afterward, it prompts the user to specify what they want to work on.
 Contributing
