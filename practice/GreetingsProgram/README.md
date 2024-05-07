@@ -8,7 +8,7 @@ This is a simple Go program that greets the user, asks how they're doing, and pr
 
    `bash`
   ```
-   git clone https://github.com/garveyshah/greetings-program.git
+   https://github.com/garveyshah/practise-go/tree/5c15cb3863f5a29f44e67177855b6e144f0ee021/practice/GreetingsProgram
   ```
 
   2.Navigate to the project directory:
