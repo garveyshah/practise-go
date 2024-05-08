@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"os"
 	"strconv"
 	"strings"
@@ -64,8 +65,7 @@ func IsInt(x float64) bool {
 func StrToFloat(str string) float64 {
 	f, err := strconv.ParseFloat(str, 64)
 	if err != nil {
-		fmt.Println("Error:", err)
-		return 0.0
+		log.Fatal("Error: Please input Numbers", err)
 	}
 
 	return f
