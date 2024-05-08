@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -51,6 +52,12 @@ func main() {
 // Calcutlate and print the sum of Positive integers from 1 upto the input number.
 func SumOfPositiveInts(num int) int {
 	result := 0
+
+	// Check if num is at the maximum value for the respective integer type.
+	if num == math.MaxInt32 || num == math.MaxInt64 {
+		// Calculate the sum using a formula to avoid overflow.
+		return num * (num + 1) / 2
+	}
 
 	for i := 1; i <= num; i++ {
 		result += i

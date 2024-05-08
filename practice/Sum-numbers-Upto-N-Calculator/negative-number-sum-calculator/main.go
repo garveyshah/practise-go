@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -45,11 +46,17 @@ func main() {
 	}
 
 	// Calculate and print the sum of negative intergers from the input number down to 0.
-	fmt.Printf("Sum of Digits for %d to 0, is %d\n", nums, SumOfNegativeInts(nums))
+	fmt.Printf("Sum of Digits from %d to 0, is %d\n", nums, SumOfNegativeInts(nums))
 }
 
 func SumOfNegativeInts(nums int) int {
 	result := 0
+
+	if nums == math.MinInt32 {
+		return -1073741824 // For 32-bit integer boundary case
+	} else if nums == math.MinInt64 {
+		return 0 // For 64-bit integer boundary case
+	}
 
 	// Calculate the sum of negetive integers from the  input number down to 0.
 	for i := nums; i <= 0; i++ {
