@@ -43,5 +43,7 @@ func GenarateFizzBuzz(num int) string {
 			result = append(result, num2+" " )
 		}
 	}
-	return strings.Join(result,"")
+	 result1 := strings.Join(result,"")
+	 result2 := strings.TrimSuffix(result1," ")
+	return result2
 }
