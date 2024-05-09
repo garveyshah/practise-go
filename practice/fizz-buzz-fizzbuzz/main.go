@@ -29,7 +29,6 @@ func main() {
 }
 
 func GenarateFizzBuzz(num int) string {
-	// output := strings.Builder
 
 	result := []string{}
 	for i := 1; i <= num; i++ {
