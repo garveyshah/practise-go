@@ -29,10 +29,11 @@ func main() {
 
 	result := IterativeFactorial(num2)
 
-	fmt.Printf("!%d is %d.\n", num2, result)
+	fmt.Printf("%d! = %d.\n", num2, result)
 }
 
 func IterativeFactorial(num int) int {
+	// Give it a limit of upto 20. factorial values beyond that are outside the boundery of int32 capac
 	if num < 0 || num > 20 {
 		return 0
 	} else if num == 0 || num == 1 {
