@@ -39,6 +39,9 @@ func GenarateFizzBuzz(num int) string {
 			result = append(result, "Buzz ")
 		} else if i%3 == 0 {
 			result = append(result, "Fizz ")
+		} else {
+			num2 :=strconv.Itoa(i)
+			result = append(result, num2+" " )
 		}
 	}
 	return strings.Join(result,"")
