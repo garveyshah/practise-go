@@ -1,0 +1,12 @@
+The core functionality of the program can be found in the lineByLine() function. After ensuring the filename can be opened, the function create a new reader using bufio.NewReader(). Then, the function uses that reader with bufio.ReadString() in order to read the input file line by line. This is accomplished by passing the newline character parameter to bufio.ReadString(). bufio.ReadString() will continue to read the file until that character is found. Constantly calling bufio.ReadString() when that parameter is the newline character results in reading the input file line by line. The for loop in the main() function exists to help to process multiple command line arguments.
+
+Executing lByL.go will generate the following kind of output:
+
+go run lByL.go /tmp/data.txt
+
+"The core functionality of the program can be found in the lineByLine() function. After ensuring the filename can be opened, the function create a new reader using bufio.NewReader(). Then, the function uses that reader with bufio.ReadString() in order to read the input file line by line. This is accomplished by passing the newline character parameter to bufio.ReadString(). bufio.ReadString() will continue to read the file until that character is found. Constantly calling bufio.ReadString() when that parameter is the newline character results in reading the input file line by line. The for loop in the main() function exists to help to process multiple command line arguments.
+
+Executing lByL.go will generate the following kind of output:
+
+go run lByL.go /tmp/data.txt"
+
