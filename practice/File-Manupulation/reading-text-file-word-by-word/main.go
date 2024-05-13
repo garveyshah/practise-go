@@ -43,12 +43,16 @@ func WordByWord(file string) error {
 }
 
 func main() {
+	// Parse the arguments on the command line.
 	flag.Parse()
+	// Check if the required number of arguments are given if not print usage instructions and exit.
 	if len(flag.Args()) == 0 {
 		fmt.Printf("usage: main <file1> [<file2> ...]\n")
 		return
 	}
+	// Iterate over the provided number of arguments (file names)
 	for _, file := range flag.Args() {
+		// Call WorfByWord function on each of the file names.
 		err := WordByWord(file)
 		if err != nil {
 			fmt.Println(err)
