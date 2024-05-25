@@ -21,7 +21,7 @@ func TestBubbleSort1(t *testing.T) {
 		t.Run(tc.name, func(t *testing.T) {
 			BubbleSort(tc.input)
 			if !reflect.DeepEqual(tc.input, tc.want) {
-				t.Errorf("Test1 Failed :- got %v, want %v", tc.input, tc.want)
+				t.Errorf("%v Failed :- got %v, want %v", tc.name, tc.input, tc.want)
 			}
 		})
 	}
