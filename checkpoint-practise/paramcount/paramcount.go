@@ -11,8 +11,8 @@ func main() {
 		z01.PrintRune('0')
 		z01.PrintRune('\n')
 		return
-	} 
+	}
 	z01.PrintRune(rune(len(os.Args)))
-	
+
 	z01.PrintRune('\n')
 }
