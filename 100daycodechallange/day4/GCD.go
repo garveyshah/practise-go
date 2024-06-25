@@ -1,6 +1,4 @@
-/*
-Day 4: Write a program to find the greatest common divisor (GCD) of two numbers.
-*/
+/* Day 4: Write a program to find the greatest common divisor (GCD) of two numbers.*/
 
 // Method 1: The LCM Method
 package main
@@ -27,7 +25,7 @@ func main() {
 	var result []int
 
 	for _, num := range nums2 {
-		num1, err:= CustomAtoi(string(num))
+		num1, err := CustomAtoi(string(num))
 		if err != nil {
 			fmt.Println("Invalid Input:", num)
 			return
@@ -41,17 +39,19 @@ func main() {
 	fmt.Println("\n GCD is", gcd)
 }
 
+// func GCD calculates the gcd range of any numbers.
 func GCD(S []int) int {
 	if len(S) == 2 {
 		return gcdpair(S[0], S[1])
 	}
-		result := S[0]
-		for i := 1 ; i < len(S); i++ {
-			result = gcdpair(result, S[i])
-		}
+	result := S[0]
+	for i := 1; i < len(S); i++ {
+		result = gcdpair(result, S[i])
+	}
 	return result
 }
 
+// func gcdpair calculates the gcd of any 2 numbers.
 func gcdpair(a, b int) int {
 	var gcd int
 	lcm := LCM(a, b)
@@ -60,7 +60,7 @@ func gcdpair(a, b int) int {
 	return gcd
 }
 
-
+// calculates the Lcm of a range of numbers.
 func LCM(a int, b int) int {
 	result := []int{}
 
@@ -82,6 +82,7 @@ func LCM(a int, b int) int {
 	return result[0]
 }
 
+// func Multiples genarates sorted multiples of a number.
 func Multiples(num int) []int {
 	var multiples []int
 
@@ -92,6 +93,7 @@ func Multiples(num int) []int {
 	return multiples
 }
 
+// func CustomAtoi converts the numbers provided as strings to integers
 func CustomAtoi(s string) (int, error) {
 	var result int
 	for _, num := range s {
@@ -103,6 +105,7 @@ func CustomAtoi(s string) (int, error) {
 	return result, nil
 }
 
+// Func BubbleSort Sorts a slice of intergers.
 func BubbleSort(s []int) []int {
 	n := len(s)
 	if n < 1 {
