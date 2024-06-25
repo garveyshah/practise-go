@@ -18,7 +18,7 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	nums, err := reader.ReadString('\n')
 	if err != nil {
-		fmt.Println("Error!! Readind Input")
+		fmt.Println("Error!! Reading Input")
 		return
 	}
 
@@ -26,10 +26,12 @@ func main() {
 	nums2 := strings.Split(nums1, " ")
 	var result []int
 
-	fmt.Println("Nums2", nums2)
-
 	for _, num := range nums2 {
-		num1, _ := CustomAtoi(string(num))
+		num1, err:= CustomAtoi(string(num))
+		if err != nil {
+			fmt.Println("Invalid Input:", num)
+			return
+		}
 		result = append(result, num1)
 	}
 	fmt.Println("\n array", result)
@@ -40,18 +42,14 @@ func main() {
 }
 
 func GCD(S []int) int {
-	var gcd int
-
 	if len(S) == 2 {
-		gcd = gcdpair(S[0], S[1])
-	} else {
+		return gcdpair(S[0], S[1])
+	}
 		result := S[0]
 		for i := 1 ; i < len(S); i++ {
 			result = gcdpair(result, S[i])
 		}
-		gcd = result
-	}
-	return gcd
+	return result
 }
 
 func gcdpair(a, b int) int {
@@ -87,7 +85,7 @@ func LCM(a int, b int) int {
 func Multiples(num int) []int {
 	var multiples []int
 
-	for i := num; i < 1000; i += num {
+	for i := num; i < 10000; i += num {
 		multiples = append(multiples, i)
 	}
 	multiples = BubbleSort(multiples)
@@ -98,7 +96,7 @@ func CustomAtoi(s string) (int, error) {
 	var result int
 	for _, num := range s {
 		if num < '0' || num > '9' {
-			return 0, fmt.Errorf("invalid chaaracter: %c", num)
+			return 0, fmt.Errorf("invalid character: %c", num)
 		}
 		result = result*10 + int(num-'0')
 	}
