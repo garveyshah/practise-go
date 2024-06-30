@@ -25,11 +25,19 @@ func main() {
 	}
 
 	MainStr = strings.TrimSpace(MainStr)
-	fmt.Println(MainStr)
+
+	Str1, Str2 :=GetInput(MainStr)
+	fmt.Printf("String 1 is :%v.\nString 2 is :%v.",Str1, Str2)
+
+
 
 }
 
-func GetInput(s string) string{
+func GetInput(s string) (string, string){
+	strSlice := strings.Split(s, " ")
 	
-	return ""
+	str1 := strings.Trim(strSlice[0],"")
+	str2 := strings.Trim(strSlice[1],"")
+
+	return str1, str2
 }
