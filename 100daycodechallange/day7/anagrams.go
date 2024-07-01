@@ -2,8 +2,6 @@
 Day 7: Implement a function to check if two strings are anagrams.
 */
 
-// workflow
-// 1. interate through the strings look for instances of "" if found append to separate string.
 package main
 
 import (
