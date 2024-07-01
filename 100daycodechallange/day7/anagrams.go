@@ -2,9 +2,8 @@
 Day 7: Implement a function to check if two strings are anagrams.
 */
 
-
-//workflow
-//1. interate through the strings look for instances of "" if found append to separate string.
+// workflow
+// 1. interate through the strings look for instances of "" if found append to separate string.
 package main
 
 import (
@@ -26,38 +25,33 @@ func main() {
 
 	MainStr = strings.TrimSpace(MainStr)
 
-	str1, str2 :=GetInput(MainStr)
-	//fmt.Printf("String 1 is :%v.\nString 2 is :%v.",Str1, Str2)
+	str1, str2 := GetInput(MainStr)
+	// fmt.Printf("String 1 is :%v.\nString 2 is :%v.",Str1, Str2)
 
 	if ConfirmAnagrams(str1, str2) {
 		fmt.Printf("\n%v and %v are anagrams.\n", str1, str2)
 	} else {
 		fmt.Printf("\n%v and %v are NOT anagrams of each other.\n", str1, str2)
 	}
-
-
-
 }
 
 // Function to format the input into two strings.
-func GetInput(s string) (string, string){
+func GetInput(s string) (string, string) {
 	strSlice := strings.Split(s, " ")
-	
-	str1 := strings.Trim(strSlice[0],"")
-	str2 := strings.Trim(strSlice[1],"")
 
+	str1, str2 := strings.Trim(strSlice[0], ""), strings.Trim(strSlice[1], "")
 	return str1, str2
 }
 
 // Function that checks if two strings are anagrams.
-func ConfirmAnagrams(str1, str2 string) bool{
+func ConfirmAnagrams(str1, str2 string) bool {
 	if len(str1) != len(str2) {
 		return false
 	}
 
 	countChar := make(map[rune]int)
 
-	for _, char  :=range str1 {
+	for _, char := range str1 {
 		countChar[char]++
 	}
 
