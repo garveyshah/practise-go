@@ -25,16 +25,18 @@ func main() {
 }
 
 func Fibbs(num int) []int {
-	result := []int{1}
-	for a := 1; a <= num; a++ {
-		for b := 1; b <= num; b++ {
-			c := a + b
-			b = c
-			a = b
-			if a + b == c {
-			result = append(result, c)
-			}
+	if num < 0 {
+		return []int{}
 		}
+	
+	result := []int{1}
+	a, b := 0,1
+	
+	for i := 1; i <= num; i++ {
+			c := a + b
+			a = b
+			b = c
+		result = append(result, c)
 	}
 	return result
 }
