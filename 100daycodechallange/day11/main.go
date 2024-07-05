@@ -23,12 +23,14 @@ func main() {
 	}
 
 	str = strings.TrimSpace(str)
+	str1 := strings.Split(str, "")
 	var Array []int
 
-	for _, char := range str {
+	for _, char := range str1 {
 		num, err := binarysearch.CustomAtoi(char)
 		if err != nil {
-			fmt.Println("Error"), err
+			fmt.Println("Error:..", err)
+			return
 		}
 		Array = append(Array, num)
 	}
