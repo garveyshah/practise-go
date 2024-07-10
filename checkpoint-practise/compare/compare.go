@@ -19,7 +19,7 @@ func Compare(a string, b string) {
 		result = "-1"
 	}
 	if a > b {
-		result = "+1"
+		result = "1"
 	}
 
 	for _, num := range result {
