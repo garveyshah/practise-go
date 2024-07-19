@@ -33,18 +33,48 @@ func Print(s string) {
 	z01.PrintRune(10)
 }
 
+// // Function AnagramChecker checks if two strings are Anagrams of each other or not.
+// func AnagramChecker(a, b string) bool {
+//	// If the lengths are not equal, they can't be anagrams
+// 	if len(a) != len(b) {
+// 		return false
+// 	}
+
+// 	letters := make(map[rune]int)
+
+// 	// Count each letter in string a
+// 	for _, char := range a {
+// 		letters[char]++
+// 	}
+
+// 	// Subtract each letter in string b
+// 	for _, char := range b {
+// 		letters[char]--
+// 		if letters[char] < 0 {
+// 			return false
+// 		}
+// 	}
+// 	return true
+// }
+
+// Function AnagramChecker checks if two strings are Anagrams of each other or not.
 func AnagramChecker(a, b string) bool {
+	// If the lengths are not equal, they can't be anagrams
 	if len(a) != len(b) {
 		return false
 	}
 
 	letters := make(map[rune]int)
 
+	// Count each letter in string a
 	for _, char := range a {
 		letters[char]++
 	}
+
+	// Subtract each letter in string b
 	for _, char := range b {
-		if _, ok := letters[char]; !ok || letters[char] == 0{
+		// If char is not in the map or count goes below zero, return false
+		if _, ok := letters[char]; !ok || letters[char] == 0 {
 			return false
 		}
 		letters[char]--
