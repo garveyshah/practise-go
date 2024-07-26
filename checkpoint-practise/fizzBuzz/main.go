@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-func main() { 
+func main() {
 	num := 100
 
 	fmt.Println(fizzBuzz(num))

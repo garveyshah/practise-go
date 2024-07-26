@@ -45,10 +45,10 @@ func main() {
 		} else {
 			result = num1 % num2
 		}
-	}  else if operator == "*" {
+	} else if operator == "*" {
 		result = num1 * num2
 		//fmt.Println(result)
-	}else {
+	} else {
 		return
 	}
 	fmt.Println(result)

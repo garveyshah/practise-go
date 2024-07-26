@@ -9,6 +9,6 @@ func main() {
 	z01.PrintRune('\n')
 }
 
-func LastRune(s string) rune{
+func LastRune(s string) rune {
 	return rune(s[len(s)-1])
 }
