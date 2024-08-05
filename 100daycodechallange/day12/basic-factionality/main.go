@@ -8,11 +8,12 @@ import (
 )
 
 func main() {
-	if len(os.Args) != 2 {
+	if len(os.Args) < 2 {
 		fmt.Println("Usage: go run . <array of numbers>")
 		return
 	}
-	slice := SplitStrings(os.Args[1])
+	slice := os.Args[1:]
+	fmt.Println("Input arry -", slice)
 
 	var arr []int
 	for _, char := range slice {
@@ -23,11 +24,25 @@ func main() {
 		}
 		arr = append(arr, num)
 	}
-	fmt.Println(arr)
+	fmt.Println("array without duplicates -",RemoveDuplicates(arr))
 }
 
-// func RemoveDuplicates(arr []int) []int {
-// }
+func RemoveDuplicates(arr []int) []int {
+	nums := make(map[int]bool)
+	result := []int{}
+
+	for _, num := range arr {
+		nums[num] = true
+	}
+
+	for _, num := range arr {
+		if _, ok := nums[num]; ok {
+			result = append(result, num)
+		}
+		delete(nums, num)
+	}
+	return result
+}
 
 func CustomAtoi(s string) (int, error) {
 	var result int
@@ -49,19 +64,4 @@ func CustomAtoi(s string) (int, error) {
 		result *= -1
 	}
 	return result, nil
-}
-
-func SplitStrings(s string) []string {
-	var result []string
-	var cup string
-
-	for i:=0; i <= len(s)-1; i {
-		
-		if char == ' ' || i == len(s) {
-			result = append(result, cup)
-			cup = ""
-		}
-		cup += string(char)
-	}
-	return result
 }
