@@ -1,3 +1,8 @@
+/*
+### 4. Generic Types
+Modify the program to handle an array of strings instead of integers.
+For example, given the input `["apple", "banana", "apple", "orange", "banana"]`, the program should output `["apple", "banana", "orange"]`.
+*/
 package main
 
 import (
