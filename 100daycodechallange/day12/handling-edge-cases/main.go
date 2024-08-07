@@ -5,7 +5,7 @@ Write a Go program to remove duplicates from an array that contains only one ele
 - Input: `[]` → Output: `[]`
 - Input: `[5, 5, 5, 5, 5]` → Output: `[5]`
 */
-package main
+package handlingedgecases
 
 import (
 	"fmt"
