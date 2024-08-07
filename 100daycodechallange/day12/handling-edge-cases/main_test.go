@@ -1,4 +1,4 @@
-package main
+package handlingedgecases
 
 import (
 	"reflect"
@@ -24,7 +24,7 @@ func TestRemoveDuplicates(t *testing.T) {
 	for _, tc := range tt {
 		result := RemoveDuplicates(tc.input)
 		if !reflect.DeepEqual(result, tc.expected) {
-			t.Errorf("%v - removeDuplicates(%v) = %v; expected %v",tc.name, tc.input, result, tc.expected)
+			t.Errorf("%v - removeDuplicates(%v) = %v; expected %v", tc.name, tc.input, result, tc.expected)
 		}
 	}
 }
