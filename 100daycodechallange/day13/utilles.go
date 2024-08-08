@@ -6,7 +6,7 @@ func CustomAtoi(s string) (int, error) {
 	var result int
 	var isNeg bool
 
-	if s[0] == ' ' {
+	if s[0] == '-' {
 		s = s[1:]
 		isNeg = true
 	}
@@ -15,7 +15,7 @@ func CustomAtoi(s string) (int, error) {
 		if char < '0' || char > '9' {
 			return 0, fmt.Errorf("invalid char \"%v\"", string(char))
 		}
-		result = result*result + int(char-'0')
+		result = result*10 + int(char-'0')
 	}
 
 	if isNeg {
