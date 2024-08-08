@@ -8,6 +8,7 @@ func main() {
 		char := str[i]
 		if i%2 == 0 {
 			z01.PrintRune(rune(char - 32))
+			continue
 		}
 		z01.PrintRune(rune(char))
 	}
