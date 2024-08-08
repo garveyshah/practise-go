@@ -12,26 +12,29 @@ func main() {
 
 	num, _ := customeAtoi(os.Args[1])
 
-	fmt.Println(FindNextPrime(num))
+	fmt.Println(FindPrevPrime(num))
 }
 
-func FindNextPrime(num int) int {
-	result := []int{}
-	for i := 0; i <= num; i++ {
+func FindPrevPrime(nb int) int {
+	var result []int
+
+	for i := 0; i <= nb; i++ {
 		if IsPrime(i) {
 			result = append(result, i)
 		}
 	}
+
 	if len(result) == 0 {
 		return 0
 	}
+	
 	return result[len(result)-1]
 }
 
-func IsPrime(num int) bool {
-	result := []int{}
-	for i := 1; i <= num; i++ {
-		if num%i == 0 {
+func IsPrime(n int) bool {
+	var result []int
+	for i := 1; i <= n; i++ {
+		if n%i == 0 {
 			result = append(result, i)
 		}
 	}
