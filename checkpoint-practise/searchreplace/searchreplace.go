@@ -10,26 +10,24 @@ func main() {
 	if len(os.Args) != 4 {
 		return
 	}
+	Print(SearchReplace(os.Args[1], os.Args[2], os.Args[3]))
+}
 
-	str := os.Args[1]
-	a := os.Args[2]
-	b := os.Args[3]
-
-	result := SearchReplace(str, a, b)
-
-	for _, char := range result {
+func Print(s string) {
+	for _, char := range s {
 		z01.PrintRune(char)
 	}
 	z01.PrintRune(10)
 }
 
-func SearchReplace(str string, a string, b string) string {
-	newStr := ""
-	for _, char := range str {
-		if char == rune(a[0]) {
+func SearchReplace(s, a, b string) string {
+	var str string
+
+	for _, char := range s {
+		if string(char) == a {
 			char = rune(b[0])
 		}
-		newStr += string(char)
+		str += string(char)
 	}
-	return newStr
+	return str
 }
