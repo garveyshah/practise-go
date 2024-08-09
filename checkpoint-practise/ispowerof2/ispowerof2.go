@@ -24,10 +24,8 @@ func Printer(s string) {
 	z01.PrintRune(10)
 }
 
-func 
-
 func IsPowerOf2(n int) string {
-	if n > 0 && n&(n-1) == 0 {
+	if n > 1 && n&(n-1) == 0 {
 		return "true"
 	}
 	return "false"
