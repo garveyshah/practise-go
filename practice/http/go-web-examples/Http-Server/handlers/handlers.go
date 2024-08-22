@@ -9,4 +9,5 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Welcome to my website!")
 	})
+	http.ListenAndServe(":2090", nil)
 }
