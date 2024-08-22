@@ -35,6 +35,8 @@ import (
 // 	return Mirror
 // }
 
+
+// for Printing map values
 func main() {
 	for j := 'A'; j <= 'Z'; j++ {
 		paired := 'Z' - (j - 'A')
