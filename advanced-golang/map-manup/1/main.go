@@ -11,6 +11,7 @@ func main() {
 	KeyOrValue(scores)
 }
 
+// Using the return value
 func Read(key string, scores map[string]int) int {
 	return scores[key]
 }
@@ -24,7 +25,9 @@ func PrintValue(score map[string]int) {
 
 // Iterating Over Keys or values Only:
 func KeyOrValue(scores map[string]int) {
-	// only the keys of thw map are iterated over
+	// check for nil map: before iterating over it to avoid runtime errors.
+	if scores != nil {
+		// only the keys of thw map are iterated over
 	for key := range scores {
 		fmt.Println("Name: ", key)
 	}
@@ -34,4 +37,7 @@ func KeyOrValue(scores map[string]int) {
 	for _, value := range scores {
 		fmt.Println("Scores: ", value)
 	}
+	}
 }
+
+
