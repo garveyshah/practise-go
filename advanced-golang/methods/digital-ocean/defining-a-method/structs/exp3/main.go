@@ -12,7 +12,7 @@ func (c Creature) Greet() Creature {
 	return c
 }
 
-func (c Creature) SayGoodbye(name staring) {
+func (c Creature) SayGoodbye(name string) {
 	fmt.Println("Farewell", name, "!")
 }
 
