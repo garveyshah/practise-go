@@ -1,0 +1,10 @@
+// Linear Equations
+// A linear equation is an equation in which the highest power of the variable is always 1.
+
+
+package main
+
+func main() {
+
+	for _, num := range 
+}
