@@ -1,37 +1,41 @@
 package main
 
-import "github.com/01-edu/z01"
+import "fmt"
 
 func main() {
-	PrintMemory([10]byte{'h', 'e', 'l', 'l', 'o', 16, 21, '*'})
+	res := PrintMemory([10]byte{'h', 'e', 'l', 'l', 'o', 16, 21, '*'})
+	fmt.Println(res)
 }
 
-func PrintMemory(arr [10]byte) {
+func PrintMemory(arr [10]byte) string {
+	res := ""
 	// Print the hexadecimal representation
 	for i, b := range arr {
-		printHex(b)
-		if (i+1)%2 == 0 {
-			z01.PrintRune(' ')
-		} 
+		res += printHex(b)
+		res += string(' ')
+		if (i == 3) || (i == 7) || (i == 9) {
+			res += "\n"
+		}
 	}
-	z01.PrintRune(10)
 
 	// Print the ASCII representation
 	for _, b := range arr {
 		if b >= 32 && b <= 126 {
-			z01.PrintRune(rune(b))
+			res += string(rune(b))
 		} else {
-			z01.PrintRune('.')
+			res += "."
 		}
 	}
-	z01.PrintRune(10)
+	//res += "\n"
+	return res
 }
 
-func printHex(b byte) {
+func printHex(b byte) string {
+	hex := ""
 	hexDigits := "0123456789abcdef"
-	z01.PrintRune(rune(hexDigits[b/16]))
-	z01.PrintRune(rune(hexDigits[b%16]))
-	z01.PrintRune(' ')
-	
 
+	hex += string(rune(hexDigits[b>>4]))
+	hex += string(rune(hexDigits[b&0x0f]))
+	//z01.PrintRune(' ')
+	return hex
 }
