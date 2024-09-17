@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 // function to calculate the slope and intercept
 func linearRegression(xs, ys []float64) (slope, intercept float64) {
@@ -25,32 +28,59 @@ func linearRegression(xs, ys []float64) (slope, intercept float64) {
 	return slope, intercept
 }
 
-
 // Function to calculate the range the next number may fall and predic the next number employing the linear regression model.
-func Prectidor(x, slope, intercept float64) (float64, float64, float64, float64, float64)   {
-	var upperB, lowerB float64
-
+func Prectidor(x, slope, intercept float64) (float64, float64, float64) {
 	guess := (slope * x) + intercept
 
 	residual := x - guess
 
+	return x, guess, residual
+}
 
-	return x, guess, upperB, lowerB, residual
+func CalculateRange(guessArray []float64, stdError float64) (float64, float64) {
+	var upperB, lowerB float64
+
+	for _, guess := range guessArray {
+		upperB = guess - (stdError * 1)
+		lowerB = guess + (stdError * 1)
+	}
+	return upperB, lowerB
+}
+
+// Function to calculate Variance of the residuals
+func StandardError(residuals []float64) float64 {
+	n := len(residuals)
+	var ssd, stdError float64
+
+	for _, num := range residuals {
+		ssd += num * num
+		stdError = ssd / float64(n-2)
+	}
+	return float64(math.Sqrt(stdError))
 }
 
 func Output(xs, ys []float64) {
-	var guess, upperB, lowerB, residual, x float64
+	var guess, upperB, lowerB, residual, x, stdError float64
 	slope, intercept := linearRegression(xs, ys)
+	var residsArray, guessArray []float64
 
 	for _, num := range xs {
-		x, guess, upperB, lowerB, residual = Prectidor(num, slope, intercept)
+		x, guess, residual = Prectidor(num, slope, intercept)
+
+		residsArray = append(residsArray, residual)
+		guessArray = append(guessArray, guess)
+
+		stdError = StandardError(residsArray)
+		upperB, lowerB = CalculateRange(guessArray, stdError)
+
+		fmt.Printf("Guess:	%.2f\n", guess)
+		fmt.Printf("\nx: %.2f\nUpperB: %.2f\nLowerB: %.2f\nResidual: %.2f\n\n", x, upperB, lowerB, residual)
+
 	}
 
 	// Output results
 	fmt.Printf("Slope:     %.2f\n", slope)
 	fmt.Printf("Intercept: %.2f\n\n", intercept)
-	fmt.Printf("Guess:	%.2f\n", guess)
-	fmt.Printf("x: %.2f\nUpperB: %.2f\nLowerB: %.2f\nResidual: %.2f\n",x, upperB, lowerB, residual)
 }
 
 func main() {
@@ -59,5 +89,4 @@ func main() {
 	ys := []float64{2, 4, 5, 4, 5}
 
 	Output(xs, ys)
-
 }
