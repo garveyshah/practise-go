@@ -1,9 +1,11 @@
 package main
 
-import "fmt"
+import (
+	t "fmt"
+)
 
 func main() {
-	fmt.Println("Hello Godwin")
+	t.Println("Hello Godwin")
 
 	/*
 			- An array has fixed size.
@@ -16,8 +18,8 @@ func main() {
 	primes := [6]int{2, 3, 5, 7, 11, 13}
 
 	var sh []int = primes[0:6]
-	fmt.Println(sh)
-	fmt.Println()
+	t.Println(sh)
+	t.Println()
 
 	/*
 	 slices are like references to arrays
@@ -28,15 +30,15 @@ func main() {
 	*/
 
 	names := [4]string{"John", "Paul", "George", "Ringo"}
-	fmt.Println(names)
+	t.Println(names)
 
 	a := names[0:2]
 	b := names[1:3]
-	fmt.Println(a, b)
+	t.Println(a, b)
 	b[0] = "Godwin"
-	fmt.Println(a, b)
-	fmt.Println(names)
-	fmt.Println()
+	t.Println(a, b)
+	t.Println(names)
+	t.Println()
 	/*
 	   	Slice Literals
 	    A slice litera is like an array literal without the lenth.
@@ -48,10 +50,10 @@ func main() {
 	   	[]bool{true, true, false}
 	*/
 	q := []int{2, 3, 5, 7, 11, 13}
-	fmt.Println(q)
+	t.Println(q)
 
 	r := []bool{true, false, true, true, false, true}
-	fmt.Println(r)
+	t.Println(r)
 
 	s := []struct {
 		i int
@@ -64,5 +66,46 @@ func main() {
 		{11, false},
 		{13, true},
 	}
-	fmt.Println(s)
+	t.Println(s)
+
+	/*
+		Slice Defaults
+		- When slicing, you may omit the high or low bounds to use their defaults instead.
+		- When slicing, you may omit the high or low bounds to use their defaults instead
+
+		- The default is zero for the low bound and the length of the slice for the high bound
+
+		For  the array
+			var a [10]int
+
+			these slice expressions are equivalent:
+			a[0:10]
+			a[:10]
+			a[0:]
+			a[:]
+	*/
+	t.Println()
+	s1 := []int{2, 3, 5, 7, 11, 13}
+	t.Println(s1)
+
+	s2 := s1[1:4]
+	t.Println(s2)
+
+	s3 := s2[1:]
+	t.Println(s3)
+
+	s4 := s1[:]
+	t.Println(s4)
+
+	s5 := s1[0:]
+	t.Println(s5)
+
+	/*
+	   	SLice length and Capacity
+	   A slice has both a lenth and a capacity
+	   The length of a slice is the number of elements it contains.
+
+	   The capacity of a slice is the number of elements the slice
+	*/
+
 }
