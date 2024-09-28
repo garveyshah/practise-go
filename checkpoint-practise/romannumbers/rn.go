@@ -29,7 +29,7 @@ func IntToroman(num int) (string, string, error) {
 				calc += calculation[i] + "+"
 			}
 			num -= number[i]
-			// n = 2000 - 1000
+			 //num = 2000 - 1000
 		}
 	}
 
@@ -44,7 +44,13 @@ func main() {
 		return
 	}
 
-	roman, steps, err := IntToroman(atoi.Atoi(os.Args[1]))
+	num, err := atoi.Atoi(os.Args[1])
+	if err != nil {
+		fmt.Println("Error: ", err)
+		return
+	}
+
+	roman, steps, err := IntToroman(num)
 	if err != nil {
 		fmt.Println("Error: ", err)
 		return
