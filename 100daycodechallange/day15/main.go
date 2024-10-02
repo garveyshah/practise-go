@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
-	"project01/100daycodechallange/day14/funcs"
+
+	"project01/100daycodechallange/day15/funcs"
 )
 
 func main() {
