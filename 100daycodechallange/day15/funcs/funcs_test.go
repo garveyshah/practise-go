@@ -1,7 +1,7 @@
 package funcs
 
 import (
-	"errors"
+	"fmt"
 	"testing"
 )
 
@@ -14,18 +14,18 @@ func TestAtoi(t *testing.T) {
 		{"202", 202, nil},
 		{"3009", 3009, nil},
 		{"0", 0, nil},
-		{"t0p", 0, errors.New("invalid charater \"t\"")},
+		{"t0p", 0, fmt.Errorf("invalid character \"t\"")},
 	}
 
 	for _, tc := range tt {
 		num, err := Atoi(tc.input)
 
-		if err != tc.err {
-			t.Fatalf("for input %q - Failed :- error mismatch - got= %q, want= %q", tc.input, err, tc.err)
+		if err == nil && tc.err != nil || err != nil && tc.err == nil || (err != nil && err.Error() != tc.err.Error()) {
+			t.Errorf("for input %q - Failed :- error mismatch - got= %s, want= %s", tc.input, err, tc.err)
 		}
 
 		if num != tc.want {
-			t.Fatalf("For input %q - Failed :- interger mismatch - got= %d, want= %d", tc.input, num, tc.want)
+			t.Errorf("For input %q - Failed :- interger mismatch - got= %d, want= %d", tc.input, num, tc.want)
 		}
 
 	}
@@ -45,7 +45,7 @@ func TestIsLeapYear(t *testing.T) {
 		got := IsLeapYear(tc.input)
 
 		if got != tc.want {
-			t.Fatalf("for input %d - Failed : bool mismatch - got= %v, want= %v", tc.input, got, tc.want)
+			t.Errorf("for input %d - Failed : bool mismatch - got= %v, want= %v", tc.input, got, tc.want)
 		}
 	}
 }
