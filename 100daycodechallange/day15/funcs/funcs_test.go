@@ -30,3 +30,22 @@ func TestAtoi(t *testing.T) {
 
 	}
 }
+
+func TestIsLeapYear(t *testing.T) {
+	tt := []struct {
+		input int
+		want  bool
+	}{
+		{1990, true},
+		{1997, false},
+		{2024, false},
+	}
+
+	for _, tc := range tt {
+		got := IsLeapYear(tc.input)
+
+		if got != tc.want {
+			t.Fatalf("for input %d - Failed : bool mismatch - got= %v, want= %v", tc.input, got, tc.want)
+		}
+	}
+}
