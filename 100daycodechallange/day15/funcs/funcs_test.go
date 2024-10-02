@@ -36,9 +36,15 @@ func TestIsLeapYear(t *testing.T) {
 		input int
 		want  bool
 	}{
-		{1990, true},
-		{1997, false},
-		{2024, false},
+		{2024, true},
+		{2032, true},
+		{2050, false},
+		{300, true},
+		{2000, true},
+		{2022, false},
+		{1994, false},
+		{2016, true},
+		{1900,true},
 	}
 
 	for _, tc := range tt {
