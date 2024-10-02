@@ -29,6 +29,11 @@ func Atoi(yearS string) (yearN int, err error) {
 }
 
 // IsLeapYear() checks if a year is a leap year or not
-func IsLeapYear(year int) (is bool) {
-	return is
+func IsLeapYear(year int) bool {
+	if year%4 == 0 {
+		return true
+	} else if year%400 == 0 {
+		return true
+	}
+	return false
 }
