@@ -2,6 +2,7 @@ package conv
 
 import "fmt"
 
+// Atoi() converts strings into intergers
 func Atoi(s string) (num int, err error) {
 	if s == "" {
 		return 0, fmt.Errorf("no input")
