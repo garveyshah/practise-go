@@ -3,6 +3,9 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"project01/100daycodechallange/day17/compute"
+	"project01/100daycodechallange/day17/conv"
 )
 
 func main() {
@@ -11,12 +14,12 @@ func main() {
 		return
 	}
 
-	num, err := conv.Atoi()
+	num, err := conv.Atoi(os.Args[1])
 	if err != nil {
 		fmt.Println("Error : ", err)
 		return
 	}
 
 	fib := compute.Fibonnaci(num)
-	fmt.Printf("The %th Fibonnaci number is : %d", num, fib)
+	fmt.Printf("The %th Fibonnaci number is : %d\n", num, fib)
 }
