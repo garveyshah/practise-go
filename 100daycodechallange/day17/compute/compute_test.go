@@ -2,7 +2,7 @@ package compute
 
 import "testing"
 
-func TestCompute(t *testing.T) {
+func TestFibonnaci(t *testing.T) {
 	tt := []struct {
 		input int
 		want  int
