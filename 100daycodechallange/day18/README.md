@@ -1,0 +1,1 @@
+# Day 18: Write a program to find the longest common prefix among an array of strings.
