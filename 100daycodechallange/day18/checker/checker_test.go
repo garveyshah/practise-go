@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestChecker(t *testing.T) {
+func TestPrefix(t *testing.T) {
 	tt := []struct {
 		input []string
 		want  string
@@ -19,7 +19,7 @@ func TestChecker(t *testing.T) {
 	}
 
 	for _, tc := range tt {
-		got := Checker(tc.input)
+		got := Prefix(tc.input)
 
 		if got != tc.want {
 			t.Errorf("For input %q - Failed -  got= %q, want= %q", tc.input, got, tc.want)
