@@ -1,6 +1,6 @@
 package checker
 
-func Checker(s []string) string {
+func Prefix(s []string) string {
 	shortest := sort(s)
 
 	for i := 0; i < len(shortest); i++ {
