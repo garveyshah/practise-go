@@ -6,7 +6,7 @@ import (
 	"bufio"
 	"flag"
 	"io"
-	"regexp"
+	// "regexp"
 )
 
 func WordByWord(file string) error {
