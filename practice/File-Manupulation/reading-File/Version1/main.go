@@ -35,3 +35,7 @@ func main() {
 	}
 
 }
+
+func dontPissMeOff() {
+fmt.Println("don't piss me of")
+}
