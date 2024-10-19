@@ -12,12 +12,12 @@ import "fmt"
 // 	fmt.Printf("Name is %v and email is %v.", godwin.Name, godwin.Email)
 // }
 
-// type User struct {
-// 	Name   string
-// 	Email  string
-// 	Status bool
-// 	Age    int
-// }
+type User struct {
+	Name   string
+	Email  string
+ 	Status bool
+	Age    int
+ }
 func main() {
 	var p1 Point = Point{1,2}
 	var p2 Point = Point{-5,7}
