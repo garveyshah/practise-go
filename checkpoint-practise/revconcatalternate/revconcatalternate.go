@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // var testCases = []struct {
 // 	args [][]int
 // 	want []int
@@ -42,46 +40,43 @@ import "fmt"
 // 	},
 // }
 
-func main() {
-	fmt.Println(RevConcatAlternate([]int{1, 2, 3}, []int{4, 5, 6}))
-	fmt.Println(RevConcatAlternate([]int{1, 2, 3}, []int{4, 5, 6, 7, 8, 9}))
-	fmt.Println(RevConcatAlternate([]int{1, 2, 3, 9, 8}, []int{4, 5}))
-	fmt.Println(RevConcatAlternate([]int{1, 2, 3}, []int{}))
-}
+// func main() {
+// 	fmt.Println(RevConcatAlternate([]int{1, 2, 3}, []int{4, 5, 6}))
+// 	fmt.Println(RevConcatAlternate([]int{1, 2, 3}, []int{4, 5, 6, 7, 8, 9}))
+// 	fmt.Println(RevConcatAlternate([]int{1, 2, 3, 9, 8}, []int{4, 5}))
+// 	fmt.Println(RevConcatAlternate([]int{1, 2, 3}, []int{}))
+// }
 
 func RevConcatAlternate(slice1, slice2 []int) []int {
 	var result []int
-	if len(slice1) == 0 && len(slice2) != 0 {
-		result = Reverser(slice2)
-		return result
-	} else if len(slice1) != 0 && len(slice2) == 0 {
-		result = Reverser(slice1)
-		return result
-	} else if len(slice1) != 0 && len(slice2) != 0 {
-		slice2 = Reverser(slice2)
-		slice1 = Reverser(slice1)
 
-		switch {
-		case len(slice1) > len(slice2):
-			for i := len(slice2) - 1; i >= 0; i-- {
-			}
-		case len(slice2) > len(slice2):
+	len1, len2 := len(slice1), len(slice2)
 
+	i, j := len1-1, len2-1
+
+	for i >= 0 && j >= 0 {
+		if len1 > len2 {
+			result = append(result, slice1[i])
+			len1--
+			i--
+		} else if len1 < len2 {
+			result = append(result, slice2[j])
+			len2--
+			j--
+		} else {
+			result = append(result, slice1[i])
+			len1--
+			i--
 		}
-		// for j := len(slice1) - 1; j >= 0; j-- {
-		result = append(result, slice1[i])
-		result = append(result, slice2[i])
-		// }
-		return result
-	} else if len(slice1) == 0 && len(slice2) == 0 {
-		result = []int{}
 	}
-	return result
-}
 
-func Reverser(slice []int) (result []int) {
-	for i := len(slice) - 1; i >= 0; i-- {
-		result = append(result, slice[i])
+	for i >= 0 {
+		result = append(result, slice1[i])
+		i--
+	}
+	for j >= 0 {
+		result = append(result, slice2[j])
+		j--
 	}
 	return result
 }
