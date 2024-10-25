@@ -61,18 +61,17 @@ func RevConcatAlternate(slice1, slice2 []int) []int {
 		slice2 = Reverser(slice2)
 		slice1 = Reverser(slice1)
 
-
 		switch {
-		case len(slice1) > len(slice2) :
-				for i := len(slice2) - 1; i >= 0; i-- {
+		case len(slice1) > len(slice2):
+			for i := len(slice2) - 1; i >= 0; i-- {
 			}
 		case len(slice2) > len(slice2):
-			
+
 		}
-			// for j := len(slice1) - 1; j >= 0; j-- {
-				result = append(result, slice1[i])
-				result = append(result, slice2[i])
-			// }
+		// for j := len(slice1) - 1; j >= 0; j-- {
+		result = append(result, slice1[i])
+		result = append(result, slice2[i])
+		// }
 		return result
 	} else if len(slice1) == 0 && len(slice2) == 0 {
 		result = []int{}
@@ -80,10 +79,9 @@ func RevConcatAlternate(slice1, slice2 []int) []int {
 	return result
 }
 
-
 func Reverser(slice []int) (result []int) {
-		for i := len(slice) - 1; i >= 0; i-- {
-			result = append(result, slice[i])
-		}
-		return result
+	for i := len(slice) - 1; i >= 0; i-- {
+		result = append(result, slice[i])
+	}
+	return result
 }
