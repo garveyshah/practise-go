@@ -2,15 +2,27 @@ package main
 
 import (
 	"fmt"
-	"os"
+
+	"github.com/01-edu/go-tests/lib/challenge"
+	"github.com/01-edu/go-tests/lib/random"
+	"github.com/01-edu/go-tests/solutions"
 )
 
 func main() {
-	if len(os.Args) != 2 {
-		return
-	}
+	// if len(os.Args) != 2 {
+	// 	return
+	// }
 
-	num, _ := customeAtoi(os.Args[1])
+	// num, _ := customeAtoi(os.Args[1])
+	
+		args := append(random.IntSliceBetween(0, 99999), 5, 4, 1, 0)
+		for _, arg := range args {
+			challenge.Function("FindPrevPrime", FindPrevPrime, solutions.FindPrevPrime, arg)
+		}
+	num := 9
+
+	fmt.Println(FindPrevPrime(5))
+	fmt.Println(FindPrevPrime(4))
 
 	fmt.Println(FindPrevPrime(num))
 }
@@ -27,7 +39,7 @@ func FindPrevPrime(nb int) int {
 	if len(result) == 0 {
 		return 0
 	}
-	
+
 	return result[len(result)-1]
 }
 
