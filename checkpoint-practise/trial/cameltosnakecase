@@ -1,0 +1,43 @@
+package main
+
+import (
+	"github.com/01-edu/go-tests/lib/challenge"
+	"github.com/01-edu/go-tests/solutions"
+)
+
+func main() {
+	args := []string{
+		"CamelCase",
+		"camelCase",
+		"HelloWorld",
+		"132",
+		" ",
+		"",
+		"A",
+		"abcs",
+		"AbC",
+		"AbCEf",
+		"abcAree",
+		"ahe1Abde",
+		"tesTing1",
+		"SOME_VARIABLE",
+		"ASuperLonGVariableName",
+		"thisIsaTestOfCamelCase",
+		"aA"
+	}
+	for _, arg := range args {
+		challange.Function("CamelToSnakeCase",CamelToSnakeCase, solutions.CamelToSnakeCase, arg)
+	}
+}
+
+func CamelToSnakeCase(input string) string {
+	if input == "" {
+		return ""
+	}
+
+	if !ValidCase(input) {
+		return input
+	}
+}
+
+func .
