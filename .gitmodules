@@ -4,4 +4,4 @@
 [submodule "sudoku"]
 	path = sudoku
 	url = https://learn.zone01kisumu.ke/git/oumouma/sudoku
-go.mod
+
