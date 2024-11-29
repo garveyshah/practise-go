@@ -4,20 +4,47 @@ package main
 
 import (
 	"fmt"
-	"time"
+	"sync"
 )
 
 func main() {
-	go helloworld()
-	// time.Sleep(1 * time.Second)
-	go goodbye()
-	time.Sleep( 32 * time.Microsecond)
+	var wg sync.WaitGroup
+	wg.Add(2)
+	go helloworld(&wg)
+	go goodbye(&wg)
+	wg.Wait()
+
+	// time.Sleep( 32 * time.Microsecond)
 }
 
-func helloworld() {
+// prints "Hellow world"
+func helloworld(wg *sync.WaitGroup) {
+	defer wg.Done()
 	fmt.Println("Hellow World")
 }
 
-func goodbye() {
+// prints "Good Bye"
+func goodbye(wg *sync.WaitGroup) {
+	defer wg.Done()
 	fmt.Println("Good Bye")
 }
+
+// The ouput is the same as the previous one,
+// but it doesn't block the main for seconds
+
+// 1. `wg.Add(int): This method indicates the number of goroutines to wait.
+// In the above code, I have provided 2 for 2 different goroutines.
+// Hence the internal counter wait becomes 2`
+// 2. wg.Wait(): This method blocks the execution of code until the internal counter 
+// becomes 0
+// wg.DOne(): This will reduce the internal counter value bby 1.
+
+// NOTE: IF a wait goup is explisitly assed into functions, it should be added by a pointer.
+
+// Channels
+// In concurrent programming, Go provides channels that you can use for biredirectional communication btwn goroutines.
+
+// Bidirectional communication means that one goroutine will send a message and the other will read it.
+// Sends and receives are blocking. Code execution will be stopped until the write an read done successfully
+
+// Channels are one of the more convinient ways to send and receive notifications.
