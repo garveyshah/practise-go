@@ -41,10 +41,3 @@ func goodbye(wg *sync.WaitGroup) {
 
 // NOTE: IF a wait goup is explisitly assed into functions, it should be added by a pointer.
 
-// Channels
-// In concurrent programming, Go provides channels that you can use for biredirectional communication btwn goroutines.
-
-// Bidirectional communication means that one goroutine will send a message and the other will read it.
-// Sends and receives are blocking. Code execution will be stopped until the write an read done successfully
-
-// Channels are one of the more convinient ways to send and receive notifications.
