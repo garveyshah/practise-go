@@ -6,7 +6,10 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"gopkg.in/yaml.v2"
+)
 
 func main() {
 	names := []string{
