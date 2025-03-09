@@ -2,6 +2,7 @@
 //  to a numbered sequence elements from that array
 // A slice is a refrence to an array.
 // Does not store any dara but offers a view of it.
+// Array and slice items are indexed from 0 to the length of the length of the array
 
 /* 
 	A[0] Elements at position 0
