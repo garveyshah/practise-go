@@ -24,5 +24,4 @@ func main() {
 	fieldUserId := T.Field(0)
 	t := fieldUserId.Tag
 	fmt.Println("StrucTag is :", t)
-	v, _
 }
